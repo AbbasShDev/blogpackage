@@ -1,0 +1,41 @@
+{
+  "name": "abbasshdev/blogpackage",
+  "description": "A demo package",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Abbas Alshaqaq",
+      "email": "abbas20alzaeem@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "AbbasShDev\\BlogPackage\\": "src",
+      "AbbasShDev\\BlogPackage\\Database\\Factories\\": "database/factories"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AbbasShDev\\BlogPackage\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "AbbasShDev\\BlogPackage\\BlogPackageServiceProvider"
+      ],
+      "aliases": {
+        "Calculator": "AbbasShDev\\BlogPackage\\Facades\\Calculator"
+      }
+    }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^7.15",
+    "phpunit/phpunit": "^9.5"
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-f": "vendor/bin/phpunit --filter"
+  }
+}
